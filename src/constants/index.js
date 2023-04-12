@@ -12,6 +12,7 @@ import {
   tailwind,
   nodejs,
   mongodb,
+  chakraUi,
   git,
   figma,
   docker,
@@ -23,6 +24,7 @@ import {
   jobit,
   tripguide,
   threejs,
+  firebase,
 } from "../assets";
 
 export const navLinks = [
@@ -97,8 +99,10 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    // name: "Three JS",
+    name: "Chakra Ui",
+    // icon: threejs,
+    icon: chakraUi,
   },
   {
     name: "git",
@@ -109,8 +113,10 @@ const technologies = [
     icon: figma,
   },
   {
-    name: "docker",
-    icon: docker,
+    // name: "docker",
+    name: "firebase",
+    icon: firebase,
+    // icon: docker,
   },
 ];
 

@@ -20,6 +20,8 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import chakraUi from "./tech/chakraUi.jfif";
+import firebase from "./tech/firebase.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -39,6 +41,8 @@ export {
   github,
   menu,
   close,
+  chakraUi,
+  firebase,
   css,
   docker,
   figma,
