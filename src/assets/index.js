@@ -4,6 +4,7 @@ import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
+import play from "./play.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -33,6 +34,9 @@ import SSi from "./company/SSi.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import snapdeal from "./snapdeal.png";
+import nordstorm from "./nordstorm.png";
+import gitRepoSearch from "./gitRepoSearch.png";
 
 export {
   logo,
@@ -67,4 +71,8 @@ export {
   carrent,
   jobit,
   tripguide,
+  snapdeal,
+  nordstorm,
+  gitRepoSearch,
+  play,
 };

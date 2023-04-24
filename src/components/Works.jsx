@@ -2,7 +2,7 @@ import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github } from "../assets";
+import { github, play } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -14,12 +14,16 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  live_demo_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div
+      className=""
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+    >
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 rounded-2xl  sm:w-[360px] w-full"
+        className="bg-tertiary p-5 rounded-2xl min-h-[455px]  sm:w-[360px] w-full"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -29,14 +33,14 @@ const ProjectCard = ({
           />
           <div className="absolute inset-0 flex gap-2 justify-end m-3 card-img_hover">
             <div
-              onClick={() => window.open(source_code_link, "_blank")}
+              onClick={() => window.open(live_demo_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex  justify-center items-center cursor-pointer"
             >
               {" "}
               <img
-                src={github}
-                alt="github"
-                className="w-1/2 h-1/2 object-contain"
+                src={play}
+                alt="demo"
+                className="w-1/2 h-1/2 object-contain rounded-full"
               />
             </div>
             <div
@@ -55,7 +59,11 @@ const ProjectCard = ({
 
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          <p className="mt-2 text-secondary text-[14px]">
+            {description.length > 154
+              ? description.substring(0, 154) + "..."
+              : description}
+          </p>
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
@@ -96,4 +104,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "projects");
